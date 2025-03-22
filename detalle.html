@@ -1,0 +1,58 @@
+<!-- detalle.html -->
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Investigación - DevModels-JB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .prose :where(h2) {
+            color: #1e293b;
+            font-weight: 700;
+            font-size: 1.5em;
+            margin-top: 1.5em;
+            margin-bottom: 0.75em;
+        }
+        
+        .card-container {
+            min-height: calc(100vh - 160px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-[Inter]">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-2xl font-bold flex items-center">
+                    <span class="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">DevModels-JB</span>
+                </a>
+                <div class="space-x-6">
+                    <a href="index.html" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Inicio</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="pt-24 pb-12 container mx-auto px-4 card-container">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-200" id="detalle-investigacion">
+            <!-- Contenido dinámico aquí -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>© 2024 Jonathan Blanco. Todos los derechos reservados.</p>
+            <p class="mt-1 text-slate-500 text-xs">
+                Estudios de diferentes tipos.
+            </p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
