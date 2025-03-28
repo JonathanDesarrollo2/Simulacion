@@ -4,55 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de Investigación - DevModels-JB</title>
+    <title>Análisis Detallado | TechModels</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .prose :where(h2) {
-            color: #1e293b;
-            font-weight: 700;
-            font-size: 1.5em;
-            margin-top: 1.5em;
-            margin-bottom: 0.75em;
+        .geometric-pattern {
+            background-color: #f8fafc;
+            background-image: 
+                linear-gradient(#e2e8f0 1px, transparent 1px),
+                linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
         }
-        
-        .card-container {
-            min-height: calc(100vh - 160px);
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid #e2e8f0;
         }
     </style>
 </head>
-<body class="bg-slate-50 font-[Inter]">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm fixed w-full z-10">
+<body class="font-[Inter]">
+    <!-- Navbar Minimal -->
+    <nav class="bg-slate-900 border-b border-slate-700">
         <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="text-2xl font-bold flex items-center">
-                    <span class="bg-gradient-to-r from-blue-700 to-cyan-600 bg-clip-text text-transparent">DevModels-JB</span>
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-md flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-semibold text-slate-200">TechModels BlanSol</span>
                 </a>
-                <div class="space-x-6">
-                    <a href="index.html" class="text-slate-600 hover:text-blue-600 transition-colors font-medium">Inicio</a>
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md transition-colors font-medium">Inicio</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Contenido Principal -->
-    <main class="pt-24 pb-12 container mx-auto px-4 card-container">
-        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-200" id="detalle-investigacion">
-            <!-- Contenido dinámico aquí -->
+    <main class="geometric-pattern pt-28 pb-12 min-h-screen">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto content-card rounded-xl shadow-lg p-8">
+                <header class="mb-12 text-center">
+                    <h1 class="text-3xl font-bold text-slate-800 mb-4">Análisis Detallado</h1>
+                    <div class="h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
+                </header>
+
+                <!-- Contenido Dinámico -->
+                <div class="prose prose-slate max-w-none" id="detalle-investigacion">
+                    ${this.renderizarContenido(investigacion.contenidoCompleto)}
+                </div>
+            </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-200">
-        <div class="container mx-auto px-4 text-center text-sm">
-            <p>© 2024 Jonathan Blanco. Todos los derechos reservados.</p>
-            <p class="mt-1 text-slate-500 text-xs">
-                Estudios de diferentes tipos.
-            </p>
+    <!-- Footer Estructurado -->
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <div class="w-7 h-7 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-md"></div>
+                    <span class="text-slate-300 font-medium">TechModels BlanSol</span>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-slate-400">© 2024 Jonathan Blanco</p>
+                    <p class="text-xs text-slate-500 mt-1">Innovación en ingeniería de software</p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/render.js"></script>
 </body>
 </html>

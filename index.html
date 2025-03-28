@@ -4,46 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollo - Simulacion de modelos</title>
+    <title>TechModels | Análisis de Desarrollo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .geometric-pattern {
+            background-color: #f8fafc;
+            background-image: 
+                linear-gradient(#e2e8f0 1px, transparent 1px),
+                linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(30, 58, 138, 0.1);
+        }
+        .image-overlay {
+            position: relative;
+            overflow: hidden;
+        }
+        .image-overlay::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        }
+    </style>
 </head>
-<body class="bg-gray-50 font-[Inter] flex flex-col min-h-screen">
-    <!-- Navbar -->
-    <nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 fixed w-full z-10">
+<body class="font-[Inter] flex flex-col min-h-screen">
+    
+    <!-- Navbar Minimal -->
+    <nav class="bg-slate-900 border-b border-slate-700">
         <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="text-2xl font-bold text-gray-900 flex items-center">
-                    <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">DevModels-JB</span>
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3 group">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-md flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-semibold text-slate-200">TechModels BlanSol</span>
                 </a>
-                <div class="space-x-6">
-                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Inicio</a>
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-slate-300 hover:text-white px-3 py-2 rounded-md transition-colors font-medium">Inicio</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Contenido Principal -->
-    <main class="pt-28 pb-12 container mx-auto px-4">
-        <div class="max-w-4xl mx-auto mb-12 text-center">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Informes de Simulacion de modelos</h1>
-            <p class="text-xl text-gray-600">Análisis de diferentes tecnicas de desarrollo.</p>
+    <main class="flex-grow geometric-pattern">
+        <div class="container mx-auto px-4 py-16">
+            <!-- Encabezado -->
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h1 class="text-4xl font-bold text-slate-900 mb-4 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
+                    Modelos de Desarrollo Modernos
+                </h1>
+                <p class="text-lg text-slate-600">Análisis técnico comparativo de metodologías actuales</p>
+            </div>
+
+            <!-- Grid de Tarjetas Mejorado -->
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" id="contenedor-investigaciones">
+                <!-- Las tarjetas se generarán aquí -->
+            </div>
         </div>
-        <div class="grid gap-8" id="contenedor-investigaciones"></div>
     </main>
-    <footer class="bg-slate-900 text-gray-300 py-8 mt-auto">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-sm">
-                © 2024 Jonathan Blanco. Todos los derechos reservados.
-            </p>
-            <p class="mt-2 text-xs text-slate-500">
-                Estudios de diferentes tipos.
-            </p>
+
+    <!-- Footer Estructurado -->
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <div class="w-7 h-7 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-md"></div>
+                    <span class="text-slate-300 font-medium">TechModels BlanSol</span>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-slate-400">© 2024 Jonathan Blanco</p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
-    <!-- Al final del body, antes del script -->
-
+    <script src="js/components.js"></script>
+    <script src="js/render.js"></script>
 </body>
 </html>

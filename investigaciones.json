@@ -1,0 +1,296 @@
+[
+    {
+      "id": 1,
+      "titulo": "Modelos de Desarrollo de Software: Análisis Comparativo",
+      "contenido": "Estudio integral de los principales modelos de desarrollo: escalonado, en V, iterativo, espiral y continuo...",
+      "contenidoCompleto": [
+        {
+          "introduccion": {
+            "titulo": "Evolución Histórica de los Modelos",
+            "texto": "Desde el enfoque rígido del modelo escalonado (1970) hasta la fluidez del desarrollo continuo (2010), los paradigmas de ingeniería de software han evolucionado para adaptarse a nuevas necesidades tecnológicas.",
+            "lineaTemporal": [
+              "1970: Modelo Escalonado (Royce)",
+              "1985: Modelo en V (Aeronáutica alemana)",
+              "1988: Modelo Espiral (Boehm)",
+              "2001: Modelos Iterativos (Manifiesto Ágil)",
+              "2010: Desarrollo Continuo (Amazon/Netflix)"
+            ]
+          }
+        },
+        {
+          "modeloDestacado": {
+            "nombre": "Escalonado",
+            "icono": { "tipo": "emoji", "valor": "📐" },
+            "enfoque": "Secuencial estricto",
+            "caracteristicas": [
+              "7 fases no superpuestas",
+              "Documentación exhaustiva",
+              "0% de flexibilidad post-aprobación",
+              "Costo promedio de cambios: $5,000/post-implementación (IEEE)"
+            ],
+            "casoEstudio": {
+              "titulo": "Sistema de Control de Reactores Nucleares",
+              "resultado": "Reducción del 99.97% en errores críticos vs métodos informales"
+            }
+          }
+        },
+        {
+          "diagramaInteractivo": {
+            "titulo": "Modelo en V: Dualidad Desarrollo-Validación",
+            "estructura": [
+              "Requisitos → Pruebas de Sistema",
+              "Diseño → Pruebas de Integración",
+              "Codificación → Pruebas Unitárias"
+            ],
+            "aplicacion": "Usado en 92% de proyectos médicos clase III (FDA 2023)",
+            "flujo": "▶️ Cada etapa izquierda genera artefactos para validación derecha"
+          }
+        },
+        {
+          "iterativo": {
+            "titulo": "Desarrollo por Iteraciones",
+            "infografia": [
+              "🔄 Ciclos de 2-6 semanas",
+              "📊 40% menos riesgos técnicos",
+              "💡 15 iteraciones promedio por proyecto",
+              "🛠 Prototipos funcionales desde iteración 3"
+            ],
+            "ejemplo": "Desarrollo de ChatGPT: 153 iteraciones en 18 meses"
+          }
+        },
+        {
+          "espiral": {
+            "advertencia": "⚠️ Complejidad Controlada",
+            "fases": [
+              {
+                "nombre": "Identificación de Riesgos",
+                "herramientas": ["FMEA", "Árboles de fallos"],
+                "costo": "15-20% del presupuesto total"
+              },
+              {
+                "nombre": "Prototipado Rápido",
+                "eficiencia": "Reduce incertidumbre técnica en 68%"
+              }
+            ],
+            "estadistica": "78% proyectos de criptografía lo utilizan"
+          }
+        },
+        {
+          "continuo": {
+            "titulo": "🚀 DevOps en Acción",
+            "pipeline": [
+              "Commit → Build → Test → Deploy → Monitor",
+              "Tiempo promedio ciclo: 11 minutos (GitLab 2023)"
+            ],
+            "casosExitos": [
+              "Amazon: 136,000 despliegues/año",
+              "Meta: 1,000+ commits/día en React"
+            ]
+          }
+        },
+        {
+          "comparativa": {
+            "titulo": "📊 Tabla Comparativa",
+            "modelos": [
+              {
+                "nombre": "Escalonado",
+                "flexibilidad": "1/10",
+                "documentación": "10/10",
+                "velocidad": "3/10"
+              },
+              {
+                "nombre": "Continuo",
+                "flexibilidad": "10/10",
+                "documentación": "6/10",
+                "velocidad": "9/10"
+              }
+            ],
+            "conclusion": "Elección depende de: criticidad del sistema, madurez de requisitos y cultura organizacional"
+          }
+        },
+        {
+          "seleccion": {
+            "titulo": "🔍 ¿Cómo Elegir?",
+            "flujograma": [
+              "¿Requiere certificación? → Sí → Modelo en V",
+              "¿Entorno volátil? → Sí → Iterativo/Espiral",
+              "¿Infraestructura cloud? → Sí → Continuo"
+            ],
+            "reglaOro": "Proyectos <6 meses: Ágil/Iterativo || Proyectos >2 años: Espiral/Híbrido"
+          }
+        }
+      ],
+      "imagen": "R.jpg"
+    },
+      {
+        "id": 2,
+        "titulo": "Metodologías Ágiles: Scrum, Kanban y Más",
+        "contenido": "Análisis completo de metodologías ágiles: diferencias entre Scrum y Kanban, roles clave, implementación práctica y casos reales...",
+        "contenidoCompleto": [
+          {
+            "introduccion": {
+              "titulo": "Panorama Actual de Metodologías Ágiles",
+              "texto": "El 78% de las empresas tecnológicas usan metodologías ágiles según el último informe State of Agile. Scrum lidera con 66% de adopción, seguido por Kanban con 35%. Las grandes empresas combinan ambas para mayor flexibilidad.",
+              "lineaTemporal": [
+                "2001: Nace el Manifiesto Ágil",
+                "2005: Scrum se estandariza",
+                "2010: Kanban gana popularidad",
+                "2015: 60% empresas Fortune 500 usan híbridos",
+                "2023: 89% equipos usan elementos ágiles"
+              ]
+            }
+          },
+          {
+            "scrumEmpresas": {
+              "titulo": "🏢 Scrum en Grandes Corporaciones",
+              "icono": "👥",
+              "ventajas": [
+                "Estructura clara para equipos de 50+ personas",
+                "Sincroniza múltiples equipos con Scrum de Scrums",
+                "Roles definidos: Product Owner, Scrum Master",
+                "Reportes mensuales a directivos"
+              ],
+              "casoReal": "Spotify: Organiza 150 equipos en 'Tribus' con sprints de 4 semanas. Cada tribu tiene su Scrum Master principal y 5-8 equipos de desarrollo.",
+              "estadisticas": [
+                "82% empresas con 1000+ empleados usan Scrum",
+                "Reducción de 40% en tiempos de entrega",
+                "15% aumento en satisfacción cliente"
+              ]
+            }
+          },
+          {
+            "kanbanPequeñas": {
+              "titulo": "📋 Kanban para Startups",
+              "icono": "🚀",
+              "beneficios": [
+                "Flexibilidad total sin sprints rígidos",
+                "Tablero visual para equipos de 2-10 personas",
+                "Priorización dinámica diaria",
+                "Limitación Work in Progress (WIP)"
+              ],
+              "ejemplo": "Buffer (gestor redes sociales): Usa Kanban con columnas: Backlog → Diseño → Desarrollo → Revisión → Listo. Límite de 3 tareas por columna.",
+              "estadisticas": [
+                "63% startups prefieren Kanban",
+                "35% más rápido en cambios urgentes",
+                "Reducción 50% de tareas pendientes"
+              ]
+            }
+          },
+          {
+            "hibridacion": {
+              "titulo": "⚡ Modelo Híbrido Empresarial",
+              "estructura": [
+                "Planificación trimestral con Scrum",
+                "Ejecución diaria con Kanban",
+                "Reuniones diarias de 15 min",
+                "Tableros combinados Jira+Trello"
+              ],
+              "casosExito": [
+                "Microsoft: Sprints de 3 semanas + tableros Kanban por feature",
+                "Samsung: 200 equipos usan Scrumban para desarrollo hardware/software"
+              ]
+            }
+          },
+          {
+            "rolesScrum": {
+              "titulo": "👨💻 Roles Clave: Scrum Master",
+              "funciones": [
+                "Facilitador principal del equipo",
+                "Domina desarrollo y modelado de procesos",
+                "Resuelve bloqueos técnicos",
+                "Conecta equipo-cliente-directivos"
+              ],
+              "perfil": "Habilidades: Liderazgo servicial, conocimiento técnico profundo, gestión de conflictos. Salario promedio: $95,000-$145,000 anuales (EE.UU 2023).",
+              "jerarquia": {
+                "niveles": [
+                  "Scrum Master → Líder Proyecto → Consultor Externo",
+                  "Desarrolladores: Junior (0-2 años) → Mid (2-5) → Senior (5+)",
+                  "Equipos paralelos: Frontend/Backend/QA"
+                ]
+              }
+            }
+          },
+          {
+            "sprints": {
+              "titulo": "⏱️ Sprints: Motor de Scrum",
+              "duracion": "2-4 semanas (58% usan 2 semanas)",
+              "fases": [
+                "Planificación (8h/semana)",
+                "Desarrollo diario (Standups 15 min)",
+                "Revisión (Demo final)",
+                "Retrospectiva (Mejoras)"
+              ],
+              "metricas": [
+                "Velocidad: 30-50 puntos/sprint promedio",
+                "Burn-down charts para progreso",
+                "85% equipos cumplen >75% objetivos"
+              ],
+              "consejo": "No alargar sprints: 73% de sprints extendidos fallan"
+            }
+          },
+          {
+            "kanbanDetalle": {
+              "titulo": "📌 Kanban Profundo: 4 Columnas Esenciales",
+              "columnas": [
+                {
+                  "nombre": "Por Hacer (Backlog)",
+                  "tareas": "Requisitos priorizados, Máx. 7 tareas",
+                  "regla": "Solo el Team Lead añade tareas"
+                },
+                {
+                  "nombre": "En Progreso",
+                  "tareas": "Límite WIP: 2-3 tareas/persona",
+                  "regla": "Nada vuelve a Backlog una vez iniciado"
+                },
+                {
+                  "nombre": "Revisión",
+                  "tareas": "QA y ajustes finales",
+                  "regla": "Tiempo máximo 48h por tarea"
+                },
+                {
+                  "nombre": "Terminado",
+                  "tareas": "Listo para producción",
+                  "regla": "Despliegue máximo cada 24h"
+                }
+              ],
+              "diagrama": {
+                "flujo": "Cliente → Backlog → Desarrollo → Revisión → Producción",
+                "herramientas": "Trello (35%), Jira (28%), Notion (17%)"
+              }
+            }
+          },
+          {
+            "otrasMetodologias": {
+              "titulo": "🌍 Otras Metodologías",
+              "modelos": [
+                {
+                  "nombre": "XP (Programación Extrema)",
+                  "caracteristicas": [
+                    "Pair programming obligatorio",
+                    "Despliegues múltiples diarios",
+                    "Prioriza simplicidad"
+                  ]
+                },
+                {
+                  "nombre": "Crystal Clear",
+                  "caracteristicas": [
+                    "Para equipos ≤ 8 personas",
+                    "Documentación mínima",
+                    "Comunicación cara a cara"
+                  ]
+                },
+                {
+                  "nombre": "SAFe",
+                  "caracteristicas": [
+                    "Para grandes corporaciones",
+                    "Combina Scrum + Kanban + XP",
+                    "Planificación trimestral (PI Planning)"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "imagen": "https://lh6.googleusercontent.com/RsohwxYK57Mnt5q5qWOq6C3lK1SvJxExT0uwQSHemFmsrBJr20DDjhtZli8tIBxeD7sNFkvvDOL0n6c4vtYzEXhyHIxBz6_ENPS_E1hk-qKu126X1s7omX85hBTnt9OK1FrjvrXh=s0"
+      }
+    ]
