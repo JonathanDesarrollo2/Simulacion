@@ -121,176 +121,185 @@
         }
       ],
       "imagen": "R.jpg"
-    },
-      {
-        "id": 2,
-        "titulo": "Metodologías Ágiles: Scrum, Kanban y Más",
-        "contenido": "Análisis completo de metodologías ágiles: diferencias entre Scrum y Kanban, roles clave, implementación práctica y casos reales...",
-        "contenidoCompleto": [
-          {
-            "introduccion": {
-              "titulo": "Panorama Actual de Metodologías Ágiles",
-              "texto": "El 78% de las empresas tecnológicas usan metodologías ágiles según el último informe State of Agile. Scrum lidera con 66% de adopción, seguido por Kanban con 35%. Las grandes empresas combinan ambas para mayor flexibilidad.",
-              "lineaTemporal": [
-                "2001: Nace el Manifiesto Ágil",
-                "2005: Scrum se estandariza",
-                "2010: Kanban gana popularidad",
-                "2015: 60% empresas Fortune 500 usan híbridos",
-                "2023: 89% equipos usan elementos ágiles"
-              ]
-            }
-          },
-          {
-            "scrumEmpresas": {
-              "titulo": "🏢 Scrum en Grandes Corporaciones",
-              "icono": "👥",
-              "ventajas": [
-                "Estructura clara para equipos de 50+ personas",
-                "Sincroniza múltiples equipos con Scrum de Scrums",
-                "Roles definidos: Product Owner, Scrum Master",
-                "Reportes mensuales a directivos"
-              ],
-              "casoReal": "Spotify: Organiza 150 equipos en 'Tribus' con sprints de 4 semanas. Cada tribu tiene su Scrum Master principal y 5-8 equipos de desarrollo.",
-              "estadisticas": [
-                "82% empresas con 1000+ empleados usan Scrum",
-                "Reducción de 40% en tiempos de entrega",
-                "15% aumento en satisfacción cliente"
-              ]
-            }
-          },
-          {
-            "kanbanPequeñas": {
-              "titulo": "📋 Kanban para Startups",
-              "icono": "🚀",
-              "beneficios": [
-                "Flexibilidad total sin sprints rígidos",
-                "Tablero visual para equipos de 2-10 personas",
-                "Priorización dinámica diaria",
-                "Limitación Work in Progress (WIP)"
-              ],
-              "ejemplo": "Buffer (gestor redes sociales): Usa Kanban con columnas: Backlog → Diseño → Desarrollo → Revisión → Listo. Límite de 3 tareas por columna.",
-              "estadisticas": [
-                "63% startups prefieren Kanban",
-                "35% más rápido en cambios urgentes",
-                "Reducción 50% de tareas pendientes"
-              ]
-            }
-          },
-          {
-            "hibridacion": {
-              "titulo": "⚡ Modelo Híbrido Empresarial",
-              "estructura": [
-                "Planificación trimestral con Scrum",
-                "Ejecución diaria con Kanban",
-                "Reuniones diarias de 15 min",
-                "Tableros combinados Jira+Trello"
-              ],
-              "casosExito": [
-                "Microsoft: Sprints de 3 semanas + tableros Kanban por feature",
-                "Samsung: 200 equipos usan Scrumban para desarrollo hardware/software"
-              ]
-            }
-          },
-          {
-            "rolesScrum": {
-              "titulo": "👨💻 Roles Clave: Scrum Master",
-              "funciones": [
-                "Facilitador principal del equipo",
-                "Domina desarrollo y modelado de procesos",
-                "Resuelve bloqueos técnicos",
-                "Conecta equipo-cliente-directivos"
-              ],
-              "perfil": "Habilidades: Liderazgo servicial, conocimiento técnico profundo, gestión de conflictos. Salario promedio: $95,000-$145,000 anuales (EE.UU 2023).",
-              "jerarquia": {
-                "niveles": [
-                  "Scrum Master → Líder Proyecto → Consultor Externo",
-                  "Desarrolladores: Junior (0-2 años) → Mid (2-5) → Senior (5+)",
-                  "Equipos paralelos: Frontend/Backend/QA"
-                ]
-              }
-            }
-          },
-          {
-            "sprints": {
-              "titulo": "⏱️ Sprints: Motor de Scrum",
-              "duracion": "2-4 semanas (58% usan 2 semanas)",
-              "fases": [
-                "Planificación (8h/semana)",
-                "Desarrollo diario (Standups 15 min)",
-                "Revisión (Demo final)",
-                "Retrospectiva (Mejoras)"
-              ],
-              "metricas": [
-                "Velocidad: 30-50 puntos/sprint promedio",
-                "Burn-down charts para progreso",
-                "85% equipos cumplen >75% objetivos"
-              ],
-              "consejo": "No alargar sprints: 73% de sprints extendidos fallan"
-            }
-          },
-          {
-            "kanbanDetalle": {
-              "titulo": "📌 Kanban Profundo: 4 Columnas Esenciales",
-              "columnas": [
-                {
-                  "nombre": "Por Hacer (Backlog)",
-                  "tareas": "Requisitos priorizados, Máx. 7 tareas",
-                  "regla": "Solo el Team Lead añade tareas"
-                },
-                {
-                  "nombre": "En Progreso",
-                  "tareas": "Límite WIP: 2-3 tareas/persona",
-                  "regla": "Nada vuelve a Backlog una vez iniciado"
-                },
-                {
-                  "nombre": "Revisión",
-                  "tareas": "QA y ajustes finales",
-                  "regla": "Tiempo máximo 48h por tarea"
-                },
-                {
-                  "nombre": "Terminado",
-                  "tareas": "Listo para producción",
-                  "regla": "Despliegue máximo cada 24h"
-                }
-              ],
-              "diagrama": {
-                "flujo": "Cliente → Backlog → Desarrollo → Revisión → Producción",
-                "herramientas": "Trello (35%), Jira (28%), Notion (17%)"
-              }
-            }
-          },
-          {
-            "otrasMetodologias": {
-              "titulo": "🌍 Otras Metodologías",
-              "modelos": [
-                {
-                  "nombre": "XP (Programación Extrema)",
-                  "caracteristicas": [
-                    "Pair programming obligatorio",
-                    "Despliegues múltiples diarios",
-                    "Prioriza simplicidad"
-                  ]
-                },
-                {
-                  "nombre": "Crystal Clear",
-                  "caracteristicas": [
-                    "Para equipos ≤ 8 personas",
-                    "Documentación mínima",
-                    "Comunicación cara a cara"
-                  ]
-                },
-                {
-                  "nombre": "SAFe",
-                  "caracteristicas": [
-                    "Para grandes corporaciones",
-                    "Combina Scrum + Kanban + XP",
-                    "Planificación trimestral (PI Planning)"
-                  ]
-                }
-              ]
-            }
+    },{
+      "id": 2,
+      "titulo": "🚀 Metodologías Ágiles: Scrum, Kanban y Más",
+      "contenido": "Análisis completo de metodologías ágiles: diferencias entre Scrum y Kanban, roles clave, implementación práctica y casos reales...",
+      "contenidoCompleto": [
+        {
+          "introduccion": {
+            "titulo": "🌍 Panorama Actual de Metodologías Ágiles",
+            "texto": "El 78% de las empresas tecnológicas usan metodologías ágiles según el último informe State of Agile. Scrum lidera con 66% de adopción, seguido por Kanban con 35%. Las grandes empresas combinan ambas para mayor flexibilidad.",
+            "lineaTemporal": [
+              "📅 2001: Nace el Manifiesto Ágil",
+              "📅 2005: Scrum se estandariza",
+              "📅 2010: Kanban gana popularidad",
+              "📅 2015: 60% empresas Fortune 500 usan híbridos",
+              "📅 2023: 89% equipos usan elementos ágiles"
+            ],
+            "imagen": "https://i.imgur.com/7v8Vtlh.png"
           }
-        ],
-        "imagen": "https://lh6.googleusercontent.com/RsohwxYK57Mnt5q5qWOq6C3lK1SvJxExT0uwQSHemFmsrBJr20DDjhtZli8tIBxeD7sNFkvvDOL0n6c4vtYzEXhyHIxBz6_ENPS_E1hk-qKu126X1s7omX85hBTnt9OK1FrjvrXh=s0"
-      }
+        },
+        {
+          "scrumEmpresas": {
+            "titulo": "🏢 Scrum en Grandes Corporaciones",
+            "icono": "👥",
+            "ventajas": [
+              "✅ Estructura clara para equipos de 50+ personas",
+              "🔄 Sincroniza múltiples equipos con Scrum de Scrums",
+              "🎯 Roles definidos: Product Owner, Scrum Master",
+              "📊 Reportes mensuales a directivos"
+            ],
+            "casoReal": "🎵 Spotify: Organiza 150 equipos en 'Tribus' con sprints de 4 semanas. Cada tribu tiene su Scrum Master principal y 5-8 equipos de desarrollo.",
+            "estadisticas": [
+              "📈 82% empresas con 1000+ empleados usan Scrum",
+              "⏱️ Reducción de 40% en tiempos de entrega",
+              "😊 15% aumento en satisfacción cliente"
+            ],
+            "imagen": "https://i.imgur.com/5tJy7Qq.jpg"
+          }
+        },
+        {
+          "kanbanPequeñas": {
+            "titulo": "📋 Kanban para Startups",
+            "icono": "🚀",
+            "beneficios": [
+              "🌀 Flexibilidad total sin sprints rígidos",
+              "📌 Tablero visual para equipos de 2-10 personas",
+              "🎯 Priorización dinámica diaria",
+              "⏳ Limitación Work in Progress (WIP)"
+            ],
+            "ejemplo": "🔄 Buffer (gestor redes sociales): Usa Kanban con columnas: Backlog → Diseño → Desarrollo → Revisión → Listo. Límite de 3 tareas por columna.",
+            "estadisticas": [
+              "💡 63% startups prefieren Kanban",
+              "⚡ 35% más rápido en cambios urgentes",
+              "📉 Reducción 50% de tareas pendientes"
+            ],
+            "imagen": "https://i.imgur.com/n7Q2wE8.jpg"
+          }
+        },
+        {
+          "hibridacion": {
+            "titulo": "⚡ Modelo Híbrido Empresarial",
+            "estructura": [
+              "📅 Planificación trimestral con Scrum",
+              "🔄 Ejecución diaria con Kanban",
+              "⏱️ Reuniones diarias de 15 min",
+              "📌 Tableros combinados Jira+Trello"
+            ],
+            "casosExito": [
+              "💻 Microsoft: Sprints de 3 semanas + tableros Kanban por feature",
+              "📱 Samsung: 200 equipos usan Scrumban para desarrollo hardware/software"
+            ],
+            "imagen": "https://i.imgur.com/Kv1J3FN.png"
+          }
+        },
+        {
+          "rolesScrum": {
+            "titulo": "👨💻 Roles Clave: Scrum Master",
+            "funciones": [
+              "🎯 Facilitador principal del equipo",
+              "💻 Domina desarrollo y modelado de procesos",
+              "🔧 Resuelve bloqueos técnicos",
+              "🤝 Conecta equipo-cliente-directivos"
+            ],
+            "perfil": "💼 Habilidades: Liderazgo servicial, conocimiento técnico profundo, gestión de conflictos. Salario promedio: $95,000-$145,000 anuales (EE.UU 2023).",
+            "jerarquia": {
+              "niveles": [
+                "👔 Scrum Master → Líder Proyecto → Consultor Externo",
+                "👩💻 Desarrolladores: Junior (0-2 años) → Mid (2-5) → Senior (5+)",
+                "🤝 Equipos paralelos: Frontend/Backend/QA"
+              ]
+            },
+            "imagen": "https://i.imgur.com/8mJ7h3c.png"
+          }
+        },
+        {
+          "sprints": {
+            "titulo": "⏱️ Sprints: Motor de Scrum",
+            "duracion": "⏳ 2-4 semanas (58% usan 2 semanas)",
+            "fases": [
+              "📝 Planificación (8h/semana)",
+              "💻 Desarrollo diario (Standups 15 min)",
+              "✅ Revisión (Demo final)",
+              "🔄 Retrospectiva (Mejoras)"
+            ],
+            "metricas": [
+              "📊 Velocidad: 30-50 puntos/sprint promedio",
+              "📉 Burn-down charts para progreso",
+              "🎯 85% equipos cumplen >75% objetivos"
+            ],
+            "consejo": "⚠️ No alargar sprints: 73% de sprints extendidos fallan",
+            "imagen": "https://i.imgur.com/5qY9oPT.png"
+          }
+        },
+        {
+          "kanbanDetalle": {
+            "titulo": "📌 Kanban Profundo: 4 Columnas Esenciales",
+            "columnas": [
+              {
+                "nombre": "📥 Por Hacer (Backlog)",
+                "tareas": "📋 Requisitos priorizados, Máx. 7 tareas",
+                "regla": "🚫 Solo el Team Lead añade tareas"
+              },
+              {
+                "nombre": "⚙️ En Progreso",
+                "tareas": "⏳ Límite WIP: 2-3 tareas/persona",
+                "regla": "🔙 Nada vuelve a Backlog una vez iniciado"
+              },
+              {
+                "nombre": "🔍 Revisión",
+                "tareas": "✅ QA y ajustes finales",
+                "regla": "⌛ Tiempo máximo 48h por tarea"
+              },
+              {
+                "nombre": "🎉 Terminado",
+                "tareas": "🚀 Listo para producción",
+                "regla": "⏱️ Despliegue máximo cada 24h"
+              }
+            ],
+            "diagrama": {
+              "flujo": "👥 Cliente → 📥 Backlog → ⚙️ Desarrollo → 🔍 Revisión → 🚀 Producción",
+              "herramientas": "🛠️ Trello (35%), Jira (28%), Notion (17%)"
+            },
+            "imagen": "https://i.imgur.com/T9WpL4k.png"
+          }
+        },
+        {
+          "otrasMetodologias": {
+            "titulo": "🌍 Otras Metodologías",
+            "modelos": [
+              {
+                "nombre": "💻 XP (Programación Extrema)",
+                "caracteristicas": [
+                  "👥 Pair programming obligatorio",
+                  "🚀 Despliegues múltiples diarios",
+                  "🎯 Prioriza simplicidad"
+                ],
+                "imagen": "https://i.imgur.com/vL3B4hR.png"
+              },
+              {
+                "nombre": "🔮 Crystal Clear",
+                "caracteristicas": [
+                  "👫 Para equipos ≤ 8 personas",
+                  "📄 Documentación mínima",
+                  "🗣️ Comunicación cara a cara"
+                ],
+                "imagen": "https://i.imgur.com/7aX2Tdj.jpg"
+              },
+              {
+                "nombre": "🏢 SAFe",
+                "caracteristicas": [
+                  "🌐 Para grandes corporaciones",
+                  "🔄 Combina Scrum + Kanban + XP",
+                  "📅 Planificación trimestral (PI Planning)"
+                ],
+                "imagen": "https://i.imgur.com/y8XZbNq.jpg"
+              }
+            ]
+          }
+        }
+      ],
+      "imagen": "https://lh6.googleusercontent.com/RsohwxYK57Mnt5q5qWOq6C3lK1SvJxExT0uwQSHemFmsrBJr20DDjhtZli8tIBxeD7sNFkvvDOL0n6c4vtYzEXhyHIxBz6_ENPS_E1hk-qKu126X1s7omX85hBTnt9OK1FrjvrXh=s0"
+    }
     ]
