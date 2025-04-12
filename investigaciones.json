@@ -301,5 +301,333 @@
         }
       ],
       "imagen": "https://lh6.googleusercontent.com/RsohwxYK57Mnt5q5qWOq6C3lK1SvJxExT0uwQSHemFmsrBJr20DDjhtZli8tIBxeD7sNFkvvDOL0n6c4vtYzEXhyHIxBz6_ENPS_E1hk-qKu126X1s7omX85hBTnt9OK1FrjvrXh=s0"
+    }, {
+      "id": 3,
+      "titulo": "Variables Estocásticas en Modelos de Simulación",
+      "contenido": "Análisis avanzado de variables aleatorias aplicadas a sistemas complejos: fundamentos teóricos, metodologías de implementación, validación estadística y casos de estudio multidisciplinarios",
+      "contenidoCompleto": [
+        {
+          "fundamentos": {
+            "titulo": "Bases Teóricas de la Aleatoriedad Controlada",
+            "texto": "Las variables estocásticas constituyen el núcleo de los modelos de simulación moderna, permitiendo representar matemáticamente la incertidumbre inherente a sistemas complejos. Su aplicación abarca desde modelos financieros de valoración de derivados hasta simulaciones epidemiológicas de propagación viral. La teoría de probabilidad medida, formalizada por Kolmogorov en 1933, provee el marco axiomático para su tratamiento riguroso, estableciendo las bases para la construcción de espacios probabilísticos completos que garantizan la consistencia matemática de las simulaciones.",
+            "lineaTemporal": [
+              "1654: Correspondencia Pascal-Fermat establece conceptos básicos de probabilidad",
+              "1733: De Moivre introduce la distribución normal",
+              "1812: Laplace publica 'Théorie Analytique des Probabilités'",
+              "1905: Einstein aplica procesos estocásticos en física browniana",
+              "1933: Kolmogorov axiomatiza la teoría de probabilidad",
+              "1944: Itō desarrolla el cálculo estocástico",
+              "1970: Box y Jenkins formalizan modelos ARIMA",
+              "1987: Primer software comercial de simulación estocástica",
+              "2008: Aplicaciones masivas en modelos de riesgo financiero",
+              "2020: Simulaciones COVID-19 con parámetros estocásticos"
+            ],
+            "imagen": "https://th.bing.com/th/id/OIP.MUCG5InNxNyCsfa6yog6RwHaHa?rs=1&pid=ImgDetMain",
+            "teoremas": [
+              "Ley de los Grandes Números: Convergencia de frecuencias relativas",
+              "Teorema del Límite Central: Distribución de medias muestrales",
+              "Teorema de Ergodicidad: Equivalencia entre promedios temporales y espaciales",
+              "Teorema de Representación de Skorokhod: Construcción de procesos estocásticos"
+            ],
+            "aplicacionesModernas": {
+              "finanzas": "Modelado de mercados financieros mediante movimiento browniano geométrico",
+              "logistica": "Optimización de cadenas de suministro con procesos de Poisson no homogéneos",
+              "salud": "Simulaciones de propagación epidemiológica usando cadenas de Markov de tiempo continuo",
+              "manufactura": "Modelos de confiabilidad basados en procesos de renovación"
+            }
+          }
+        },
+        {
+          "clasificacionVariables": {
+            "titulo": "Taxonomía de Variables Aleatorias",
+            "estructura": {
+              "discretas": {
+                "definicion": "Variables con espacio muestral numerable y finito",
+                "propiedades": [
+                  "Función de masa de probabilidad (PMF) discreta",
+                  "Espacio de probabilidad σ-aditivo",
+                  "Medida de probabilidad concentrada en puntos atómicos"
+                ],
+                "ejemplos": [
+                  "Distribución Binomial: Modelo de éxitos en n ensayos",
+                  "Distribución de Poisson: Conteo de eventos raros",
+                  "Hipergeométrica: Muestreo sin reemplazo"
+                ]
+              },
+              "continuas": {
+                "definicion": "Variables con soporte en espacios métricos completos",
+                "propiedades": [
+                  "Función de densidad de probabilidad (PDF) integrable",
+                  "Medida de Lebesgue-compatibilidad",
+                  "Diferenciabilidad casi por todas partes"
+                ],
+                "ejemplos": [
+                  "Normal: Aproximación de sumas independientes",
+                  "Exponencial: Procesos sin memoria",
+                  "Beta: Modelado de proporciones"
+                ]
+              },
+              "hibridas": {
+                "definicion": "Mezcla de componentes discretas y continuas",
+                "casos": [
+                  "Modelos de riesgo operacional con pérdidas discretas y continuas",
+                  "Sistemas de colas con llegadas discretas y tiempos de servicio continuos",
+                  "Procesos de Lévy en modelos financieros"
+                ]
+              }
+            },
+            "comparativa": {
+              "caracteristica": ["Soporte", "PMF/PDF", "Esperanza", "Varianza"],
+              "discreta": ["Numerable", "P(X=x)", "ΣxP(x)", "Σ(x-μ)²P(x)"],
+              "continua": ["No numerable", "f(x)dx", "∫xf(x)dx", "∫(x-μ)²f(x)dx"]
+            },
+            "imagen": "https://th.bing.com/th/id/OIP.HPrRVuV4B4fBAFJXX4tizQHaES?rs=1&pid=ImgDetMain"
+          }
+        },
+        {
+          "casoEstudio": {
+            "titulo": "Modelo de Gestión de Inventarios Multinivel",
+            "contexto": "Sistema de distribución farmacéutica con 15 centros regionales y demanda estocástica dependiente de factores epidemiológicos",
+            "metodologia": {
+              "variablesEntrada": [
+                "X_t ~ NegativeBinomial(r=15, p=0.3): Demanda diaria por centro",
+                "Y ~ Gamma(α=2.5, β=0.4): Tiempo de reposición",
+                "Z ~ Bernoulli(p=0.85): Disponibilidad de transporte"
+              ],
+              "parametros": [
+                "Nivel de servicio objetivo: 99.7%",
+                "Costo de almacenamiento: $1.25/unidad/día",
+                "Costo de quiebre: $15,000 por evento"
+              ],
+              "ecuaciones": [
+                "Punto de reorden: s = E[X]E[Y] + z_α√(Var(X)E[Y] + Var(Y)E[X]²)",
+                "Cantidad óptima: Q = √(2λK/h(1 - λ/μ))"
+              ]
+            },
+            "simulacion": {
+              "configuracion": [
+                "Horizonte temporal: 5 años (1,825 días)",
+                "Réplicas: 10,000 iteraciones",
+                "Método de muestreo: Latin Hypercube con estratificación"
+              ],
+              "resultados": {
+                "metricas": [
+                  "Nivel de servicio promedio: 99.2% ± 0.15%",
+                  "Costo total esperado: $2.45M ± $185K",
+                  "Eventos de quiebre: 1.2 por año"
+                ],
+                "sensibilidad": [
+                  "Elasticidad precio-almacenamiento: -0.78",
+                  "Impacto variabilidad demanda: +0.43% costo por 1% CV"
+                ]
+              },
+              "visualizacion": [
+                "Gráficos de convergencia de Monte Carlo",
+                "Mapas de calor de correlación paramétrica",
+                "Diagramas de distribución acumulada empírica"
+              ]
+            },
+            "imagen": "https://economipedia.com/wp-content/uploads/Variable-estad%C3%ADstica.jpg"
+          }
+        },
+        {
+          "validacionEstadistica": {
+            "titulo": "Protocolo de Verificación de Modelos",
+            "metodos": [
+              {
+                "nombre": "Prueba χ² de Pearson",
+                "aplicacion": "Validación de distribuciones discretas",
+                "procedimiento": [
+                  "Partición del soporte en k clases mutuamente excluyentes",
+                  "Cálculo de estadístico Q = Σ(O_i - E_i)²/E_i",
+                  "Comparación con χ²_{k-p-1,1-α}"
+                ]
+              },
+              {
+                "nombre": "Kolmogorov-Smirnov",
+                "aplicacion": "Ajuste a distribuciones continuas",
+                "procedimiento": [
+                  "Cálculo de D_n = sup_x |F_n(x) - F(x)|",
+                  "Uso de tablas críticas no paramétricas",
+                  "Corrección de Lilliefors para parámetros estimados"
+                ]
+              },
+              {
+                "nombre": "Anderson-Darling",
+                "aplicacion": "Validación de colas distribucionales",
+                "procedimiento": [
+                  "Cálculo A² = -n - Σ(2i-1)(lnF(Y_i) + ln(1-F(Y_{n+1-i}))",
+                  "Uso de valores críticos específicos por distribución",
+                  "Transformación de parámetros invariante"
+                ]
+              }
+            ],
+            "casoEjemplo": {
+              "contexto": "Validación de generador de números pseudoaleatorios",
+              "pruebas": [
+                "Test de frecuencia (NIST SP 800-22)",
+                "Test de rachas ascendentes/descendentes",
+                "Prueba de entropía de Shannon"
+              ],
+              "resultados": [
+                "Valor-p uniforme en [0.01, 0.98]",
+                "Entropía medida: 7.98 bits/byte",
+                "Autocorrelación máxima: 0.021"
+              ]
+            },
+            "imagen": "https://invest-online.jp/wp/wp-content/uploads/2018/03/calculating-yeild.png"
+          }
+        },
+        {
+          "aplicacionesAvanzadas": {
+            "titulo": "Implementaciones en Sistemas Complejos",
+            "sectores": [
+              {
+                "nombre": "Energías Renovables",
+                "modelos": [
+                  "Predicción de generación eólica mediante procesos ARIMA-GARCH",
+                  "Optimización de almacenamiento con cadenas de Markov de decisión",
+                  "Análisis de riesgo de suministro usando teoría de valores extremos"
+                ],
+                "datos": [
+                  "Reducción de 38% en costos de operación",
+                  "Mejora del 22% en utilización de activos",
+                  "Disminución de 65% en eventos de desabasto"
+                ]
+              },
+              {
+                "nombre": "Telecomunicaciones",
+                "modelos": [
+                  "Modelos de colas M/M/c con abandonos",
+                  "Dimensionamiento de buffers mediante teoría de tráfico",
+                  "Algoritmos de enrutamiento estocástico"
+                ],
+                "datos": [
+                  "Aumento del 15% en throughput de red",
+                  "Reducción del 40% en latencia p95",
+                  "Optimización del 25% en uso de espectro"
+                ]
+              },
+              {
+                "nombre": "Agricultura de Precisión",
+                "modelos": [
+                  "Simulación de rendimiento con procesos espaciales gaussianos",
+                  "Optimización de riego mediante programación dinámica",
+                  "Modelos epidemiológicos para plagas"
+                ],
+                "datos": [
+                  "Incremento del 18% en productividad",
+                  "Reducción del 30% en uso de agroquímicos",
+                  "Mejora del 22% en gestión de riesgos"
+                ]
+              }
+            ],
+            "tendencias": [
+              "Integración con modelos de machine learning probabilístico",
+              "Simulaciones híbridas cuántico-estocásticas",
+              "Modelado multiescala con acoplamiento estocástico"
+            ],
+            "imagen": "https://img.freepik.com/fotos-premium/diagrama-sistemas-complejos_810293-100540.jpg"
+          }
+        },
+        {
+          "herramientasAvanzadas": {
+            "titulo": "Ecosistema Tecnológico para Simulación",
+            "plataformas": [
+              {
+                "nombre": "Python Científico",
+                "librerias": [
+                  "NumPy: Operaciones vectorizadas eficientes",
+                  "SciPy: Distribuciones probabilísticas avanzadas",
+                  "SimPy: Framework para simulaciones discretas",
+                  "PyMC3: Inferencia probabilística bayesiana"
+                ],
+                "casosUso": [
+                  "Simulación Monte Carlo de alta dimensión",
+                  "Optimización estocástica con algoritmos genéticos",
+                  "Análisis de sensibilidad global mediante Sobol indices"
+                ]
+              },
+              {
+                "nombre": "Entornos Empresariales",
+                "herramientas": [
+                  "Arena Simulation: Modelado visual de procesos",
+                  "AnyLogic: Simulación híbrida multimétodo",
+                  "Simio: Optimización basada en agentes"
+                ],
+                "capacidades": [
+                  "Paralelización masiva en clusters GPU",
+                  "Integración con sistemas ERP en tiempo real",
+                  "Visualización 3D interactiva"
+                ]
+              },
+              {
+                "nombre": "Computación de Alto Rendimiento",
+                "tecnologias": [
+                  "MPI para distribución de cargas",
+                  "CUDA en aceleradores NVIDIA",
+                  "Contenedores Docker para reproducibilidad"
+                ],
+                "benchmarks": [
+                  "10^6 réplicas en 12.4 segundos (NVIDIA DGX A100)",
+                  "Escalado lineal hasta 512 nodos",
+                  "Throughput de 2.4 TB/s en operaciones estocásticas"
+                ]
+              }
+            ],
+            "flujoTrabajo": [
+              "Diseño conceptual del sistema",
+              "Implementación del modelo base",
+              "Calibración paramétrica iterativa",
+              "Validación estadística rigurosa",
+              "Análisis de resultados multidimensional"
+            ],
+            "imagen": "https://th.bing.com/th/id/OIP.mEuJvJOnFdUTuHpecEWS-gHaFO?rs=1&pid=ImgDetMain"
+          }
+        },
+        {
+          "retosInvestigacion": {
+            "titulo": "Fronteras del Modelado Estocástico",
+            "desafios": [
+              {
+                "categoria": "Teóricos",
+                "problemas": [
+                  "Integración con sistemas cuánticos no lineales",
+                  "Modelado de dependencias en alta dimensión",
+                  "Incertidumbre epistemológica en parámetros"
+                ]
+              },
+              {
+                "categoria": "Computacionales",
+                "problemas": [
+                  "Curse of dimensionality en espacios de parámetros",
+                  "Muestreo eficiente en distribuciones multimodales",
+                  "Validación de generadores aleatorios cuánticos"
+                ]
+              },
+              {
+                "categoria": "Aplicados",
+                "problemas": [
+                  "Interpretabilidad en modelos híbridos AI/Estocásticos",
+                  "Certificación de modelos para regulación financiera",
+                  "Ética en simulaciones de sistemas sociales"
+                ]
+              }
+            ],
+            "solucionesEmergentes": [
+              "Algoritmos de cadenas de Markov híbridas (HMC)",
+              "Teoría de rough paths para procesos irregulares",
+              "Arquitecturas neuromórficas para simulación en tiempo real"
+            ],
+            "roadmap": [
+              "2024: Estándares ISO para validación de modelos",
+              "2026: Integración cuántico-clásica en simulaciones",
+              "2028: Modelos autocalibrables con meta-aprendizaje"
+            ],
+            "imagen": "https://th.bing.com/th/id/OIP.wZNY6KFGBgodiT2mnQO5zwHaFF?rs=1&pid=ImgDetMain"
+          }
+        }
+      ],
+      "imagen": "https://rankactive.com/wp-content/uploads/2018/04/website-analysis-first.jpg"
     }
     ]
