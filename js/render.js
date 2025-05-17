@@ -56,6 +56,7 @@ class RenderManager {
         case 'aplicacionesAvanzadas': componente = this.renderAplicacionesAvanzadas(data); break;
         case 'herramientasAvanzadas': componente = this.renderHerramientasAvanzadas(data); break;
         case 'retosInvestigacion': componente = this.renderRetosInvestigacion(data); break;
+        case 'capasDetalladas': componente = this.renderCapasDetalladas(data); break;
         default: componente = this.renderComponenteNoReconocido(item); break;
       }
       
@@ -448,7 +449,47 @@ class RenderManager {
 
 
 
-
+// Agrega este método en tu RenderManager
+renderCapasDetalladas(data) {
+  return `
+    <section class="space-y-8 bg-blue-50 p-6 rounded-xl">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">${data.titulo}</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        ${data.capas.map(capa => `
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-blue-500 font-bold">#${capa.id}</span>
+              <h3 class="text-xl font-semibold">${capa.nombre}</h3>
+            </div>
+            <p class="text-gray-600 mb-2">${capa.resumen}</p>
+            <div class="space-y-3">
+              <div class="bg-gray-50 p-4 rounded-md">
+                <p class="text-sm font-medium text-blue-700 mb-2">Descripción técnica:</p>
+                <p class="text-gray-600">${capa.descripcion}</p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-md">
+                <p class="text-sm font-medium text-blue-700 mb-2">Especificaciones:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                  ${capa.detallesTecnicos.map(d => `<li class="text-gray-600">${d}</li>`).join('')}
+                </ul>
+              </div>
+              <div class="bg-blue-100 p-3 rounded-md">
+                <p class="text-sm font-medium text-blue-800">Protocolos asociados:</p>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  ${capa.protocolos.map(p => `
+                    <span class="px-3 py-1 bg-blue-200 text-blue-800 rounded-full text-sm">
+                      ${p}
+                    </span>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+  `;
+}
 
 
 

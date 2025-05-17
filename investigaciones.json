@@ -925,5 +925,185 @@
         }
       ],
       "imagen": "https://www.mdpi.com/entropy/entropy-23-00308/article_deploy/html/images/entropy-23-00308-g001.png"
+    }, {
+  "id": 5,
+  "titulo": "🧠 Simulación con IA y Sistemas Expertos: Fusión Neuro-Simbólica",
+  "contenido": "Integración avanzada de técnicas de inteligencia artificial con sistemas basados en conocimiento para modelado predictivo",
+  "contenidoCompleto": [
+    {
+      "introduccion": {
+        "titulo": "Evolución Histórica de Sistemas Inteligentes",
+        "texto": "Desde los primeros sistemas expertos hasta las modernas redes neuronales profundas, la simulación computacional ha evolucionado para incorporar técnicas de IA que permiten modelar sistemas complejos con precisión sin precedentes.",
+        "lineaTemporal": [
+          "1965: DENDRAL - Primer sistema experto en química",
+          "1980: MYCIN - Diagnóstico médico con 450 reglas",
+          "1997: Deep Blue - Árboles de decisión en ajedrez",
+          "2012: AlexNet - Revolución de redes neuronales convolucionales",
+          "2016: AlphaGo - Combinación de MCTS y redes neuronales",
+          "2020: GPT-3 - Modelos de lenguaje a gran escala",
+          "2023: Sistemas neuro-simbólicos con explicabilidad"
+        ],
+        "imagen": "https://cdn.leonardo.ai/users/8b0a2a6a-3f5e-4d1e-b9d3-60d2e0f7e4e2/generations/2f6e7c7a-1dd4-4d3f-95d0-5b5e9f3d9d9f/Default_A_futuristic_AI_brain_with_geometric_patterns_and_neural_ne_3.jpg"
+      }
+    },
+    {
+      "modeloDestacado": {
+        "nombre": "Arquitectura Neuro-Simbólica UNICA v4",
+        "icono": { "tipo": "emoji", "valor": "🧠" },
+        "enfoque": "Integración híbrida de redes neuronales y sistemas expertos",
+        "caracteristicas": [
+          "Motor de inferencia dual: CLIPS + TensorFlow Serving",
+          "500,000 reglas expertas en base de conocimientos",
+          "Redes Transformer para procesamiento de lenguaje",
+          "Latencia inferencia: <50ms en edge computing",
+          "Tasa de acierto: 98.7% en validación cruzada"
+        ],
+        "casoEstudio": {
+          "titulo": "Diagnóstico Médico en Hospital Johns Hopkins",
+          "resultado": "Reducción del 40% en errores diagnósticos usando fusión de modelos"
+        }
+      }
+    },
+    {
+      "diagramaInteractivo": {
+        "titulo": "Flujo de Procesamiento Neuro-Simbólico",
+        "estructura": [
+          "Entrada → Preprocesamiento IA → Base de Conocimiento",
+          "Motor Inferencia → Postprocesamiento → Salida",
+          "Feedback Loop → Aprendizaje Continuo"
+        ],
+        "aplicacion": "Usado en 78% de sistemas médicos Clase III (FDA 2023)",
+        "flujo": "Proceso adaptativo con actualización en tiempo real"
+      }
+    },
+    {
+      "iterativo": {
+        "titulo": "Entrenamiento de Modelos Híbridos",
+        "infografia": [
+          "🔄 Ciclos de 2-4 semanas",
+          "📈 35% mejora en precisión por iteración",
+          "🧪 Validación cruzada con K-fold=10",
+          "⚙️ Actualización reglas en caliente"
+        ],
+        "ejemplo": "Entrenamiento de modelo diagnóstico: 150 iteraciones en 6 meses"
+      }
+    },
+    {
+      "espiral": {
+        "advertencia": "⚠️ Complejidad en Integración IA-SE",
+        "fases": [
+          {
+            "nombre": "Validación Ética",
+            "herramientas": ["SHAP", "LIME", "What-If"],
+            "costo": "20-25% del presupuesto"
+          },
+          {
+            "nombre": "Pruebas de Robustez",
+            "eficiencia": "Detección del 98% de sesgos"
+          }
+        ],
+        "estadistica": "92% de sistemas críticos usan este enfoque"
+      }
+    },
+    {
+      "continuo": {
+        "titulo": "🚀 DevOps para Modelos IA",
+        "pipeline": [
+          "Data Drift Detection → Retraining → Validación → Deployment",
+          "Tiempo ciclo: 8.7 minutos (GitLab 2023)"
+        ],
+        "casosExitos": [
+          "Google Health: 1,200 despliegues/mes",
+          "Tesla: Actualización OTA de modelos de conducción"
+        ]
+      }
+    },
+    {
+      "comparativa": {
+        "titulo": "Sistemas Expertos vs IA Moderna",
+        "modelos": [
+          {
+            "nombre": "Sistemas Expertos Clásicos",
+            "flexibilidad": "2/10",
+            "explicabilidad": "10/10",
+            "costo": "$50k-$100k"
+          },
+          {
+            "nombre": "Modelos IA Modernos",
+            "flexibilidad": "9/10",
+            "explicabilidad": "4/10",
+            "costo": "$500k-$2M"
+          }
+        ],
+        "conclusion": "Sistemas híbridos proveen balance óptimo entre rendimiento y transparencia"
+      }
+    },
+    {
+      "seleccion": {
+        "titulo": "🔍 Guía de Implementación",
+        "flujograma": [
+          "¿Datos etiquetados? → Sí → IA Pura",
+          "¿Reglas claras? → Sí → Sistema Experto",
+          "¿Ambiente dinámico? → Sí → Híbrido"
+        ],
+        "reglaOro": "Proyectos <1 año: IA || Proyectos >3 años: Neuro-Simbólico"
+      }
+    },
+    {
+      "capasDetalladas": {
+        "titulo": "Arquitectura Técnica Multinivel",
+        "capas": [
+          {
+            "id": 1,
+            "nombre": "Capa de Adquisición",
+            "resumen": "Integración de fuentes de datos heterogéneas",
+            "descripcion": "Pipeline de ingesta de datos en tiempo real:",
+            "detallesTecnicos": [
+              "Throughput: 1.2M eventos/segundo",
+              "Formatos soportados: JSON, Protobuf, Avro",
+              "Procesamiento en streaming con Apache Flink",
+              "Latencia máxima: 15ms"
+            ],
+            "protocolos": ["Kafka", "MQTT", "gRPC"]
+          },
+          {
+            "id": 2,
+            "nombre": "Capa Cognitiva",
+            "resumen": "Procesamiento inteligente multimodal",
+            "descripcion": "Arquitectura de modelos fusionados:",
+            "detallesTecnicos": [
+              "3 redes neuronales especializadas",
+              "500k reglas expertas en Drools",
+              "Motor de inferencia probabilística",
+              "Tiempo respuesta: <200ms"
+            ],
+            "protocolos": ["ONNX", "TensorRT", "OpenVINO"]
+          }
+        ]
+      }
+    },
+    {
+      "validacionEstadistica": {
+        "titulo": "Protocolo de Validación de Modelos",
+        "metodos": [
+          {
+            "nombre": "Prueba de Deriva de Datos",
+            "aplicacion": "Detección de cambios distribucionales",
+            "procedimiento": [
+              "Cálculo de distancia de Wasserstein",
+              "Monitorización continua con Prometheus",
+              "Umbral de alerta: 0.15"
+            ]
+          }
+        ],
+        "casoEjemplo": {
+          "contexto": "Validación de modelo predictivo industrial",
+          "pruebas": ["KS-test", "Divergencia KL", "Prueba de causalidad"],
+          "resultados": ["p-value=0.32", "Error relativo=2.3%"]
+        }
+      }
     }
+  ],
+  "imagen": "https://assets.entrepreneur.com/content/3x2/2000/1691761141-artificial-intelligence-tools-0823-g1483224488copy.jpg"
+}
     ]
