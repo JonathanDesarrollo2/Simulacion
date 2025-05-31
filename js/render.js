@@ -59,6 +59,11 @@ class RenderManager {
         case 'capasDetalladas': componente = this.renderCapasDetalladas(data); break;
         case 'kanbanSistemaDeudas': componente = this.renderKanbanSistemaDeudas(data); break;
         case 'historiasKanban': componente = this.renderHistoriasKanban(data); break;
+case 'kanbanConcepto': componente = this.renderKanbanConcepto(data); break;
+case 'kanbanDeudas': componente = this.renderKanbanDeudas(data); break;
+case 'kanbanProceso': componente = this.renderKanbanProceso(data); break;
+case 'kanbanVentajas': componente = this.renderKanbanVentajas(data); break;
+case 'historiasKanban': componente = this.renderHistoriasKanban(data); break;
         default: componente = this.renderComponenteNoReconocido(item); break;
       }
       
@@ -143,9 +148,101 @@ renderHistoriasKanban(data) {
     </section>
   `;
 }
+// En RenderManager
+renderKanbanConcepto(data) {
+  return `
+    <section class="bg-blue-50 p-6 rounded-xl space-y-4">
+      <h2 class="text-2xl font-bold">${data.titulo}</h2>
+      <p class="text-lg">${data.definicion}</p>
+      <div class="grid grid-cols-2 gap-4">
+        ${data.principios.map(principio => `
+          <div class="bg-white p-3 rounded shadow">
+            <p>${principio}</p>
+          </div>
+        `).join('')}
+      </div>
+      <div class="bg-yellow-100 p-4 rounded mt-4">
+        <p>${data.analogia}</p>
+      </div>
+    </section>
+  `;
+}
 
-// En el método renderizarContenido, agregar:
+renderKanbanDeudas(data) {
+  return `
+    <section class="bg-green-50 p-6 rounded-xl space-y-6">
+      <h2 class="text-2xl font-bold">${data.titulo}</h2>
+      <p>${data.implementacion}</p>
+      
+      <div class="grid grid-cols-5 gap-2">
+        ${data.columnas.map(col => `
+          <div class="bg-white p-2 rounded text-center border-t-4 border-${col.color}-500">
+            <h3 class="font-bold">${col.nombre}</h3>
+            <p class="text-sm">${col.accion}</p>
+          </div>
+        `).join('')}
+      </div>
+      
+      <div class="mt-4">
+        <h3 class="font-bold mb-2">Beneficios obtenidos:</h3>
+        <ul class="list-disc pl-5">
+          ${data.beneficios.map(b => `<li>${b}</li>`).join('')}
+        </ul>
+      </div>
+    </section>
+  `;
+}
 
+renderKanbanProceso(data) {
+  return `
+    <section class="bg-yellow-50 p-6 rounded-xl space-y-4">
+      <h2 class="text-2xl font-bold">${data.titulo}</h2>
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-bold">Caso ejemplo: ${data.ejemplo.caso}</h3>
+        <ol class="list-decimal pl-5 mt-2">
+          ${data.ejemplo.pasos.map(paso => `<li>${paso}</li>`).join('')}
+        </ol>
+      </div>
+      <p class="mt-2 font-medium">Tiempo promedio: ${data.tiempoPromedio}</p>
+    </section>
+  `;
+}
+
+renderKanbanVentajas(data) {
+  return `
+    <section class="bg-purple-50 p-6 rounded-xl">
+      <h2 class="text-2xl font-bold mb-4">${data.titulo}</h2>
+      <div class="grid grid-cols-2 gap-4">
+        ${data.mejoras.map(mejora => `
+          <div class="bg-white p-3 rounded shadow">
+            <p>${mejora}</p>
+          </div>
+        `).join('')}
+      </div>
+      <div class="mt-4 bg-white p-4 rounded">
+        <p class="italic">"${data.testimonio}"</p>
+      </div>
+    </section>
+  `;
+}
+
+renderHistoriasKanban(data) {
+  return `
+    <section class="bg-gray-100 p-6 rounded-xl">
+      <h2 class="text-2xl font-bold mb-4">${data.titulo}</h2>
+      <p>${data.descripcion}</p>
+      
+      <div class="grid grid-cols-4 gap-4 mt-4">
+        ${data.imagenes.map((img, i) => `
+          <div>
+            <img src="${img}" alt="Paso ${i+1}" class="w-full h-32 object-cover rounded">
+            <p class="text-sm mt-2">${data.etapas[i]}</p>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+  `;
+}
 
 
 
