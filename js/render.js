@@ -57,6 +57,8 @@ class RenderManager {
         case 'herramientasAvanzadas': componente = this.renderHerramientasAvanzadas(data); break;
         case 'retosInvestigacion': componente = this.renderRetosInvestigacion(data); break;
         case 'capasDetalladas': componente = this.renderCapasDetalladas(data); break;
+        case 'kanbanSistemaDeudas': componente = this.renderKanbanSistemaDeudas(data); break;
+        case 'historiasKanban': componente = this.renderHistoriasKanban(data); break;
         default: componente = this.renderComponenteNoReconocido(item); break;
       }
       
@@ -64,6 +66,101 @@ class RenderManager {
     }
     return htmlFinal;
   }
+
+// En la clase RenderManager
+renderKanbanSistemaDeudas(data) {
+  return `
+    <section class="space-y-8 bg-yellow-50 p-6 rounded-xl">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">${data.titulo}</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">${data.introduccion}</p>
+      
+      <div class="mt-6">
+        <h3 class="text-xl font-semibold text-gray-700 mb-4">Beneficios Clave</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          ${data.beneficios.map((beneficio, index) => `
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg shadow-sm">
+              <span class="text-2xl">${['📋','👀','⚡','🔄'][index]}</span>
+              <p class="text-gray-600">${beneficio}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+      
+      <div class="mt-8">
+        <h3 class="text-xl font-semibold text-gray-700 mb-4">Nuestro Flujo Kanban</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+          ${data.columnasTipicas.map(columna => `
+            <div class="bg-white p-4 rounded-lg border border-gray-200 text-center">
+              <h4 class="font-bold text-blue-600">${columna.nombre}</h4>
+              <p class="text-sm text-gray-600 mt-2">${columna.descripcion}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+      
+      <div class="mt-8 bg-white p-5 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold text-gray-700 mb-3">Cómo lo aplicamos</h3>
+        <p class="text-gray-600">${data.comoAplicamos}</p>
+        <div class="mt-4 space-y-3">
+          ${data.ventajasEspecificas.map(ventaja => `
+            <div class="flex items-start gap-2">
+              <span class="text-green-500">✓</span>
+              <p class="text-gray-600">${ventaja}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+renderHistoriasKanban(data) {
+  return `
+    <section class="space-y-8 bg-gray-100 p-6 rounded-xl">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">${data.titulo}</h2>
+      <p class="text-lg text-gray-600">${data.descripcion}</p>
+      
+      <div class="grid grid-cols-2 gap-4">
+        ${data.imagenes.map((img, index) => `
+          <div class="relative group">
+            <img src="${img}" alt="Historia Kanban ${index+1}" 
+                 class="w-full h-48 object-cover rounded-lg shadow-md transform group-hover:scale-105 transition-transform">
+            <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-2 text-center">
+              ${data.explicaciones[index]}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      
+      <div class="mt-6 bg-white p-4 rounded-lg">
+        <h3 class="text-lg font-semibold mb-3">Nuestro aprendizaje</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li class="text-gray-600">Empezar simple es mejor que no empezar</li>
+          <li class="text-gray-600">La flexibilidad de Kanban se adapta a cualquier cambio</li>
+          <li class="text-gray-600">Lo visual ayuda a todo el equipo a entender el proceso</li>
+        </ul>
+      </div>
+    </section>
+  `;
+}
+
+// En el método renderizarContenido, agregar:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   // Métodos de renderizado específicos
   renderIntroduccion(data) {
